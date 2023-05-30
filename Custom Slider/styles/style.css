@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root {
+    /* PRIMARY */
+    --full-slider-bar-color: hsl(174, 77%, 80%);
+    --slider-backround-color: hsl(174, 86%, 45%);
+    --discount-background-color: hsl(14, 92%, 95%);
+
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+/* MAIN CONTENT CONATAINER SECTION */
+.component-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+
+/* SLIDER */
+.slidecontainer {
+    min-width: 100%;
+}
+
+/* slider customization */
+#mySlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin-top: 2em;
+    height: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 1em;
+    background: linear-gradient(to right, hsl(174, 77%, 80%) 50%, hsl(224, 65%, 95%) 50%);
+}
+
+/* slider thumb customization */
+#mySlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 38px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    opacity: 1;
+    background-image: url('../images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: var(--slider-backround-color);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 10px 38px 1px rgba(16, 213, 194, 1);
+    -moz-box-shadow: 0px 10px 38px 1px rgba(16, 213, 194, 1);
+    box-shadow: 0px 10px 38px 1px rgba(16, 213, 194, 1);
+}
+
+/* slider on hover customization */
+#mySlider::-webkit-slider-thumb:hover {
+    background-color: hsl(174, 85%, 37%);
+}
+
+/* media querries */
+@media(max-width:800px) {
+    body {
+        background-size: auto;
+    }
+
+    #mySlider {
+        height: 8px;
+    }
+
+    #mySlider::-webkit-slider-thumb {
+        width: 45px;
+    }
+
+}
+
+@media(max-width:400px) {
+    #mySlider::-webkit-slider-thumb {
+        width: 40px;
+    }
+}
+
+@media(max-width:300px) {
+    #mySlider::-webkit-slider-thumb {
+        width: 35px;
+    }
+}
